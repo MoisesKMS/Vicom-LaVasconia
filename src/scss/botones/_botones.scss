@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.btn-enlace {
+    background-color: v.$naranja;
+    color: v.$blanco;
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    font-weight: v.$bold;
+    font-family: v.$fuente_headings;
+    font-size: 1.4rem;
+    @include m.tablet {
+        display: inline-block;
+        background-color: unset;
+        color: v.$negro;
+        position: relative;
+        transition-property: color;
+        transition-duration: 300ms;
+        &::after {
+            background-color: v.$naranja;
+            content: '';
+            position: absolute;
+            left: 1rem;
+            bottom: .5rem;
+            height: .3rem;
+            width: 3rem;
+            transition-property: width;
+            transition-duration: 300ms;
+        }
+        &:hover {
+            color: v.$naranja;
+            &::after {
+                width: 80%;
+            }
+        }
+    }
+}
