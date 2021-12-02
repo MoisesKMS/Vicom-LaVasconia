@@ -1,0 +1,31 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.personaje {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @include m.tablet {
+        display: block;
+        margin-left: 20rem;
+    }
+    &__contenedor {
+        @include m.tablet {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+    &__heading {
+        font-size: 2.8rem;
+        text-align: left;
+    }
+    &__texto {
+        text-align: left;
+        font-weight: v.$bold;
+        span {
+            font-weight: v.$regular;
+        }
+    }
+}

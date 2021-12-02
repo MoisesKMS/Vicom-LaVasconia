@@ -2,9 +2,6 @@
 @use 'base/mixins' as m;
 .acordeon {
     width: 40rem;
-    margin-top: 7rem;
-    margin-left: auto;
-    margin-right: auto;
     &__menu {
         width: 40rem;
     }
