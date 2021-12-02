@@ -1,0 +1,56 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.mas-vendidos {
+    margin-top: 5rem;
+    text-align: center;
+    &__header {
+        margin: 2rem;
+        position: relative;
+        .flechas {
+            @include m.tablet {
+                position: absolute;
+                top: 40%;
+                right: 0;
+            }
+        }
+    }
+    &__heading {
+        font-size: 3.5rem;
+        margin: 0;
+        font-weight: v.$bold;
+        line-height: 1;
+        margin-bottom: 3rem;
+        @include m.tablet {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.articulo {
+    padding: 0 2rem;
+    @include m.tablet {
+        padding: 2rem;
+    }
+    &__imagen {
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__heading {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+        color: lighten($color: v.$negro, $amount: 40%);
+        font-weight: v.$bold;
+        font-family: v.$fuente_headings;
+        margin-bottom: 0;
+        text-align: left;
+    }
+    &__texto {
+        font-size: 1.4rem;
+        margin: .5rem 0;
+        max-width: 30rem;
+        text-align: left;
+    }
+    .btn-enlace {
+        display: inline-block;
+    }
+}
