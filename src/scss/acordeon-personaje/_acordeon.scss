@@ -1,0 +1,52 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.acordeon {
+    width: 40rem;
+    margin-top: 7rem;
+    margin-left: auto;
+    margin-right: auto;
+    &__menu {
+        width: 40rem;
+    }
+    &__lista {
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+    }
+    &__item {
+        width: 100%;
+        list-style: none;
+        height: 4rem;
+        overflow: hidden;
+        border-bottom: .1rem solid v.$blanco;
+        transition: 300ms;
+    }
+    &__heading {
+        display: block;
+        padding: 1.5rem;
+        text-decoration: none;
+        font-family: sans-serif;
+        color: v.$negro;
+        display: flex;
+        justify-content: space-between;
+        font-weight: v.$bold;
+        font-size: 2rem;
+    }
+    &__texto {
+        color: v.$negro;
+        font-size: 1.2rem;
+        padding: 0 2rem;
+    }
+}
+
+.fa-chevron-down {
+    transition: 300ms;
+}
+
+.scale {
+    height: 180px;
+}
+
+.indicador {
+    font-size: 3rem;
+}

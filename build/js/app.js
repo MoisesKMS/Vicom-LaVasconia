@@ -1,0 +1,1 @@
+const acordeon=document.querySelector("#acordeon");acordeon.addEventListener("click",t=>{if(t.preventDefault(),t.target.classList.contains("acordeon__heading")){"+"==t.target.children[1].textContent?t.target.children[1].textContent="-":t.target.children[1].textContent="+",t.target.parentElement.classList.toggle("scale")}});
